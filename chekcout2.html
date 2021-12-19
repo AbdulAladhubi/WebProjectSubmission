@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="chekc out page for Northstar store">
+  <meta name="keywords" content="checkout,pay,paymnet,cart">
+  <meta name="author" content="Abdul Rahman">
+  <link rel="icon" href="/logo/jalenossLogoRed.png">
+  <title>Chekcout</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="checkout.css"> -->
+  <meta name="theme-color" content="#7952b3">
+  <!-- Custom styles for this template -->
+  <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body id="checkoutPage" class="bg-light">
+
+
+  <!-- header  -->
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img style="width:60%;" src="/logo/AbdulExpressRed.png" alt="Best Online Clothes Shop">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item px-3">
+              <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="/aboutus.html">About Us</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="/ContactUs.html">Contact Us</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link" id="userdetails" href="/UserDetails.html">User Details</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" id="loginlogout" href="index.html">Login</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="cart">
+          <button type="button" id="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count-info"></span>
+          </button>
+
+          <div class="cart-container">
+            <div class="cart-list">
+
+            </div>
+
+            <div class="cart-total">
+              <h3>Total: $</h3>
+              <span id="cart-total-value"></span>
+              <a href="chekcout2.html"> <span>checkout</span> </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+
+
+
+
+
+  </header>
+
+
+  <div style="display: none;" class="product-list row row-cols-1 row-cols-md-5 g-4"></div>
+
+  <main class="container-fluid">
+    <section class="container-fluid">
+      <!-- here is the logo and the chekc out text  -->
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/logo/AbdulExpressRed.png" style="width: 5%;" alt="" id="CheckOutPageCartLogo">
+        <h2>Checkout form</h2>
+        <p class="lead">Welcome to the checkout page , pay now and enjoy our amazing products with an amazing quality</p>
+      </div>
+    </section>
+
+
+    <section class="container-fluid">
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 col-sm order-md-last ">
+<!-- this will display the cart and the item inside it -->
+          <div class="card ">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <!-- <h3>Items: <span id="cart-count-info"></span></h3> -->
+            </h4>
+            <div class="container">
+              <h3>Total: $ <span id="checkoutTotal"></span></h3>
+            </div>
+
+            <div class="container-fluid">
+              <div class="table-responsive" id="checkoutCartList">
+                <!-- class="cart-list" -->
+
+              </div>
+
+
+            </div>
+            <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <!-- Now we display our checkout form  -->
+        <div class="col-md-7 col-lg-8">
+          <!-- onsubmit="return false;" -->
+          <h4 class="mb-3">Billing address</h4>
+          <form name="checkout" id="chekcoutStatus" method="get">
+            <fieldset>
+
+
+              <legend>
+                Billing address
+              </legend>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" name="FirstName" class="form-control" id="firstName" maxlength="30"
+                    aria-describedby="Eneter your first name" placeholder="" value="David" required>
+
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" name="LastName" class="form-control" id="lastName" maxlength="30" placeholder=""
+                    value="Dobrik" >
+
+                </div>
+
+                <div class="col-12">
+                  <label for="username" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" name="Username" maxlength="50" id="username"
+                      placeholder="Username" value="DavidDobrki_1999" >
+
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-muted">(Required)</span></label>
+                  <input type="email" class="form-control" value="demo1@email.com" name="Email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" maxlength="60" placeholder="you@example.com" required>
+
+                </div>
+
+                <div class="col-12">
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control" value="31 Yeats Heights" name="Address" id="address"
+                    placeholder="1234 Main St" required>
+
+                </div>
+
+                <div class="col-12">
+                  <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" name="Address2" id="address2" value="Ballinod"
+                    placeholder="Apartment or suite">
+                </div>
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" name="Country" id="country" required>
+                    <option value="">Choose...</option>
+                    <option selected>Ireland</option>
+                    <option>Oman</option>
+                    <option>Japan</option>
+                  </select>
+
+                </div>
+
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" name="State" id="state" required>
+                    <option value="">Choose...</option>
+                    <option selected>Sligo</option>
+                    <option>Dublin</option>
+                    <option>Cork</option>
+                  </select>
+
+                </div>
+
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" name="Zip" value="F91TH" id="zip" placeholder="" required>
+
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" checked id="same-address">
+                <label class="form-check-label" for="same-address">Shipping address is the same as my billing
+                  address</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Save this information for next time</label>
+              </div>
+
+              <hr class="my-4">
+
+              <h4 class="mb-3">Payment<br>
+                <!-- This message will be displayed if there is invalid payment detaisl -->
+                <small id="inValidPayment" class="d-none" style="font-size: 10px;color: red;"> 
+                  
+                  <i
+                    class="fas fa-times-circle"></i> <span id="invalidPayMessage"> Inavlid Inputs ,please try
+                    again</span></small>
+              </h4>
+              <!-- Radio Buttons for choosing the payment method -->
+              <!-- Paymnet method credit card -->
+              <div class="my-3">
+                <div class="form-check">
+                  <input onclick="DisplayCreditCard()" id="credit" name="paymentMethod" type="radio"
+                    class="form-check-input" checked required>
+                  <label class="form-check-label" for="credit">Credit card</label>
+                </div>
+<!-- Payment method PayPal -->
+                <div class="form-check">
+                  <input onclick="DisplayPayPalSection()" id="paypal" name="paymentMethod" type="radio"
+                    class="form-check-input" required>
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+
+              <div id="displayPaymentMethod" class="row gy-3">
+                <!-- Credit Card Method -->
+                <div id="CreditCardPaymentMethod" class="row">
+                  <h1></h1>
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" value="David Dobrik" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" value="123456789" class="form-control" id="cc-number" placeholder="" required>
+
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="text" value="11/23" class="form-control" id="cc-expiration" placeholder="" required>
+
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" value="123" class="form-control" id="cc-cvv" placeholder="" required>
+
+                  </div>
+                </div>
+                <!-- PayPal Method -->
+                <div id="PayPalPaymentMethod" class="row d-none">
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">PayPal Email</label>
+                    <input type="text" class="form-control" id="emailPayPal" value="demo1@email.com"
+                      placeholder="Enter PayPal Email" required>
+                    <small class="text-muted">Enter PayPal Email</small>
+
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="PayPalPassword" class="form-label">Password</label>
+                    <input type="text" value="AbdulIs1Amazing" class="form-control" id="PayPalPassword"
+                      placeholder="Enter Password" required>
+
+                  </div>
+                </div>
+
+
+              </div>
+              <!-- Two buttons one for the credit card checkout and one for the PayPal cehckout -->
+              <button onclick="ValidateCreditCard()" class="w-100 btn btn-primary btn-lg my-4" id="cardButton"
+                type="submit">Pay with credit card</button>
+              <button onclick="ValidatePAyPal()" class="w-100 btn btn-primary btn-lg d-none" id="payPalButton"
+                type="submit">Pay with pay pal</button>
+
+              <!-- onclick="sweetAlert()" -->
+            </fieldset>
+
+            <hr class="my-4">
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+  <!--Start of  Footer -->
+  <footer>
+    <section class="mb-0 mt-0">
+      <div class="footer text-light">
+        <div class="  pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <a href="#">
+                 <img style="width: 40%;margin-bottom: 5%;" src="/logo/AbdulExpressRed.png" alt="">
+                    <h2 style="margin-top: 5%;">Northstar</h2>
+                   
+                </a>
+                <address class="color-dark-20 text-dark">
+                  1600 Amphitheatre Parkway
+                  <br> Mountain View, CA 94043
+                </address>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Disclaimer</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Product</h4>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#">Features</a>
+                  </li>
+                  <li>
+                    <a href="#">Customers</a>
+                  </li>
+                  <li>
+                    <a href="#">Store</a>
+                  </li>
+                </ul>
+              </div>
+              <br style="clear:both" class="hidden-sm-up">
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Company</h4>
+                <ul class="list-unstyled list-dark">
+                  <li>
+                    <a href="#">About Northstar</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Press</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Connect</h4>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#">Support</a>
+                  </li>
+                  <li>
+                    <a href="#">Social</a>
+                  </li>
+
+                </ul>
+                <p class="text-dark mt-2">Stay up-to-date!</p>
+                <form>
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email"
+                        aria-describedby="basic-addon2">
+                      <button class="btn btn-primary btn-sm" type="button">Ok</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <hr>
+            <div class="row f-flex justify-content-between">
+              <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                <p class="mt-2  text-dark"> © Copyright 2021 • All Rights
+                  Reserved |
+                  <a class=" " href="#">Disclaimer</a> |
+                  <a class=" " href="#">Contact</a>
+                </p>
+              </div>
+              <div class="col-md-4 text-xs-center   text-lg-dark text-secondary my-1">
+                <div class="btn-container  mt-1 text-md-end text-sm-center">
+                  <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-twitter fa-lg color-dark" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-primary">
+                      <i class="fab fa-google-plus fa-lg" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!--End of  Footer -->
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="app.js"></script>
+  <script src="/checkout.js"></script>
+  <script src="/login.js"></script>
+
+</body>
+
+</html>

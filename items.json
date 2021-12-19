@@ -1,0 +1,74 @@
+[
+    {
+        "name" : "Mens Apparel",
+        "category" : "Men",
+        "price" : "50.25",
+        "imgSrc" : "/products/mensApparel.jpg",
+        "no":"1",
+        "description":"A men's amazing apparel with an amazing quality"
+    },
+    {
+        "name" : "Curve outfit",
+        "category" : "Women",
+        "price" : "75.00",
+        "imgSrc" : "/products/curve.jpg",
+        "no":"2",
+        "description":"This is an amazing Curve outfit Inspo with an amazing quality"
+    },{
+        "name" : "Home Decor",
+        "category" : "Home",
+        "price" : "25.99",
+        "imgSrc" : "/products/homedecor.jpg",
+        "no":"3",
+        "description":"This is an amazing Home Decor with an amazing quality"
+    },{
+        "name" : "New Neturlas",
+        "category" : "Woman",
+        "price" : "55.25",
+        "imgSrc" : "/products/newNeutrals.jpg",
+        "no":"4",
+        "description":"This is an amazing New Neturlas with an amazing quality"
+    },{
+        "name" : "Seamless",
+        "category" : "Women",
+        "price" : "50.25",
+        "imgSrc" : "/products/seamless.jpg",
+        "no":"5",
+        "description":"This is an amazing Seamless with an amazing quality"
+    },{
+        "name" : "Sexy Piec",
+        "category" : "Women",
+        "price" : "70.00",
+        "imgSrc" : "/products/sexypiec.jpg",
+        "no":"6",
+        "description":"This is an amazing Sexy Piec with an amazing quality"
+    },{
+        "name" : "kids outfit",
+        "category" : "Kids",
+        "price" : "50.25",
+        "imgSrc" : "/products/trending kids outfit.jpg",
+        "no":"7",
+        "description":"This is an amazing kids outfit with an amazing quality"
+    },{
+        "name" : "Accessories",
+        "category" : "Women",
+        "price" : "15.25",
+        "imgSrc" : "/products/trendingAcce.jpg",
+        "no":"8",
+        "description":"This is an amazing Accessories with an amazing quality"
+    },{
+        "name" : "Underwear",
+        "category" : "Women",
+        "price" : "15.00",
+        "imgSrc" : "/products/underwear.jpg",
+        "no":"9",
+        "description":"This is an amazing Underwear with an amazing quality"
+    },{
+        "name" : "Winter Friendly",
+        "category" : "Chair",
+        "price" : "80.00",
+        "imgSrc" : "/products/winterfriendly.jpg",
+        "no":"10",
+        "description":"This is an amazing Winter Friendly with an amazing quality"
+    }
+]

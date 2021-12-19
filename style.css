@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* line 3, ../../trying scout/sass/style.scss */
+nav {
+  background-color: #e6e6e6;
+  color: black;
+}
+
+/* line 8, ../../trying scout/sass/style.scss */
+.navbar-collapse a {
+  color: black;
+}
+
+/* line 13, ../../trying scout/sass/style.scss */
+:root {
+  --ghost-white: #f8f9fd;
+  --fire-bush: #E52F20;
+  --granite-gray: #626a6a;
+  --baltic-sea: #33383c;
+  --trans: all 0.5s ease-in-out;
+}
+
+/* line 21, ../../trying scout/sass/style.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* line 27, ../../trying scout/sass/style.scss */
+body {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* resets and resuable stylings */
+/* line 33, ../../trying scout/sass/style.scss */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* line 37, ../../trying scout/sass/style.scss */
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+/* line 41, ../../trying scout/sass/style.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 45, ../../trying scout/sass/style.scss */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* line 50, ../../trying scout/sass/style.scss */
+.text {
+  font-size: 1.1rem;
+  margin: 1.2rem 0;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+/* end of resets and reusable stylings  */
+/* >>>>>>>>>>>>>>>>>> */
+/* header */
+/* line 61, ../../trying scout/sass/style.scss */
+.cart {
+  justify-self: flex-end;
+  padding-right: 8px;
+}
+
+/* line 66, ../../trying scout/sass/style.scss */
+#cart-btn {
+  border: none;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--granite-gray);
+  position: relative;
+}
+
+/* line 73, ../../trying scout/sass/style.scss */
+#cart-count-info {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  background: var(--fire-bush);
+  color: #fff;
+  font-size: 1rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* line 92, ../../trying scout/sass/style.scss */
+.cart-container {
+  position: absolute;
+  overflow-y: scroll;
+  background: #fff;
+  width: 100%;
+  height: 600px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.21);
+  display: none;
+}
+
+/* line 105, ../../trying scout/sass/style.scss */
+.cart-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* line 108, ../../trying scout/sass/style.scss */
+.cart-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* js related class */
+/* line 117, ../../trying scout/sass/style.scss */
+.show-cart-container {
+  display: block;
+}
+
+/*  */
+/* line 121, ../../trying scout/sass/style.scss */
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  padding: 1.2rem 0.6rem;
+  height: 140px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+}
+
+/* line 131, ../../trying scout/sass/style.scss */
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* line 134, ../../trying scout/sass/style.scss */
+.cart-item-del-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 0.05rem 0.45rem;
+  font-size: 1.4rem;
+  background: var(--fire-bush);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* line 149, ../../trying scout/sass/style.scss */
+.cart-item img {
+  width: 80px;
+}
+
+/* line 152, ../../trying scout/sass/style.scss */
+.cart-item-info {
+  text-align: center;
+}
+
+/* line 155, ../../trying scout/sass/style.scss */
+.cart-item-info span {
+  display: block;
+}
+
+/* line 158, ../../trying scout/sass/style.scss */
+.cart-total {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--fire-bush);
+  color: #fff;
+}
+
+/* line 166, ../../trying scout/sass/style.scss */
+.cart-total h3 {
+  margin-right: 0.2rem;
+  font-size: 1.3rem;
+}
+
+/* line 170, ../../trying scout/sass/style.scss */
+#cart-total-value {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* line 175, ../../trying scout/sass/style.scss */
+.cart-total .chekcoutLink {
+  padding-left: 9%;
+  font-weight: bold;
+  color: #e99c2f;
+}
+
+/* line 180, ../../trying scout/sass/style.scss */
+.cart-total .chekcoutLink:hover {
+  padding-left: 9%;
+  font-weight: bold;
+  color: #E52F20;
+}
+
+/* products */
+/* line 188, ../../trying scout/sass/style.scss */
+.product-item:hover .add-to-cart-btn {
+  opacity: 1;
+}
+
+/* line 191, ../../trying scout/sass/style.scss */
+.add-to-cart-btn {
+  background-color: white;
+  color: #ad2222;
+  border-radius: 4%;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 1px;
+  cursor: pointer;
+  border: 1px solid #ad2222;
+  background: none;
+}
+
+/* line 205, ../../trying scout/sass/style.scss */
+.add-to-cart-btn .fas {
+  margin-right: 0.4rem;
+}
+
+/* line 208, ../../trying scout/sass/style.scss */
+.add-to-cart-btn:hover {
+  background-color: #ad2222;
+}
+
+/* line 212, ../../trying scout/sass/style.scss */
+.add-to-cart-btn:hover {
+  color: white;
+}
+
+/* line 217, ../../trying scout/sass/style.scss */
+footer {
+  background-color: #fafafa;
+  padding-top: 1rem;
+  margin-top: 3rem;
+}
+
+/* line 222, ../../trying scout/sass/style.scss */
+footer ul li > a {
+  color: black;
+}
+
+/* line 225, ../../trying scout/sass/style.scss */
+footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 230, ../../trying scout/sass/style.scss */
+.social-icons {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+/* line 234, ../../trying scout/sass/style.scss */
+.social-icons a {
+  color: black;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1.25rem;
+  transition: var(--trans);
+}
+
+/* line 245, ../../trying scout/sass/style.scss */
+.social-icons a:hover {
+  color: grey;
+}
+
+/* line 250, ../../trying scout/sass/style.scss */
+#brandsLogo {
+  margin: 0.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 767px) {
+  /* line 255, ../../trying scout/sass/style.scss */
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  /* line 258, ../../trying scout/sass/style.scss */
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+/* line 263, ../../trying scout/sass/style.scss */
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  /* line 272, ../../trying scout/sass/style.scss */
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  /* line 277, ../../trying scout/sass/style.scss */
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+/* line 283, ../../trying scout/sass/style.scss */
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+/* Custom cards Css */
+/* line 289, ../../trying scout/sass/style.scss */
+.rounded-4 {
+  border-radius: .5rem;
+}
+
+/* line 290, ../../trying scout/sass/style.scss */
+.rounded-5 {
+  border-radius: 1rem;
+}
+
+/* line 292, ../../trying scout/sass/style.scss */
+.text-shadow-1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+/* line 293, ../../trying scout/sass/style.scss */
+.text-shadow-2 {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+/* line 294, ../../trying scout/sass/style.scss */
+.text-shadow-3 {
+  text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+/* line 296, ../../trying scout/sass/style.scss */
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (min-width: 480px) {
+  /* line 308, ../../trying scout/sass/style.scss */
+  .btns button {
+    display: inline-block;
+  }
+  /* line 311, ../../trying scout/sass/style.scss */
+  .btns button:first-child {
+    margin-right: 0.4rem;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  /* line 317, ../../trying scout/sass/style.scss */
+  .navbar {
+    padding: 1.5rem 3rem !important;
+  }
+  /* line 320, ../../trying scout/sass/style.scss */
+  .cart-container {
+    width: 480px;
+    left: auto;
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* line 329, ../../trying scout/sass/style.scss */
+  .navbar {
+    padding: 1.5rem 6rem !important;
+  }
+  /* line 332, ../../trying scout/sass/style.scss */
+  .cart-container {
+    right: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 338, ../../trying scout/sass/style.scss */
+  .navbar {
+    padding: 1.5rem 14rem !important;
+  }
+  /* line 341, ../../trying scout/sass/style.scss */
+  .cart-container {
+    right: 14rem;
+  }
+}
+
+/* }  
+
+
+#myCarousel {	
+	margin: 0 auto;
+	padding: 0 68px;
+}
+#myCarousel .carousel-item {
+	text-align: center;
+	overflow: hidden;
+	height: 160px;
+}
+#myCarousel .carousel-item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+}
+#myCarousel .carousel-item img {
+	margin: 0 auto;
+}
+#carousel-control-prev, #carousel-control-next {
+	width: 68px;
+	background: none;
+}
+#carousel-control-prev i, #carousel-control-next i {
+	font-size: 28px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin-top: -15px;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+#carousel-indicators {
+	bottom: -40px;
+}
+#carousel-indicators li, #carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+#carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+}
+#carousel-indicators li.active {
+	background: #555;
+}  */
+/* USer Details Style */
+/* <!-- style="border: 2px solid rgb(23, 138, 100);background-color: turquoise;margin: 2%;width: 50%;padding: 2%;" --> */
+/* line 403, ../../trying scout/sass/style.scss */
+.userDetailsPara {
+  font-weight: normal;
+}
+
+/* line 408, ../../trying scout/sass/style.scss */
+.userDetailsHead {
+  background-color: #aad4f7;
+  margin: 2%;
+  padding: 2%;
+  width: 60%;
+  font-weight: bold;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

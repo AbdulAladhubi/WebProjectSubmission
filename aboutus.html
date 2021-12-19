@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="about Northstar store">
+  <meta name="keywords" content="aboutus,return,satisfaction,delivery">
+  <meta name="author" content="Abdul Rahman">
+  <link rel="icon" href="/logo/jalenossLogoRed.png">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg sticky-top ">
+            <div class="container">
+                <a  class="navbar-brand text-danger" href="#">
+                  <img style="width:60%;" src="/logo/AbdulExpressRed.png" alt="Best Online Clothes Shop">
+             
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+                        </li>
+
+                        <li class="nav-item px-3">
+                            <a class="nav-link " aria-current="page" href="/aboutus.html">About Us</a>
+                        </li>
+
+                        <li class="nav-item px-3">
+                            <a class="nav-link " aria-current="page" href="/ContactUs.html">Contact Us</a>
+                        </li>
+
+                      
+                        <li class="nav-item px-3">
+                            <a class="nav-link" id="userdetails" href="/UserDetails.html">User Details</a>
+                          </li>
+                          <li class="nav-item px-3">
+                            <a class="nav-link" id="loginlogout" href="/index.html">Login</a>
+                          </li>
+                    </ul>
+
+                </div>
+
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info"></span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Total: $</h3>
+                            <span id="cart-total-value"></span>
+                            <a href="try.html"> <span>checkout</span> </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+      <!-- this line of code is to make sure the cart is working fully -->
+      <div style="display: none;" class="product-list row row-cols-1 row-cols-md-5 g-4"></div>
+
+        <div style="background-image: linear-gradient(90deg, rgba(37,23,14,0.19121151878720233) 0%, rgba(37,23,14,0.18000703699448528) 100%),url(/aboutusImg/girlsBoys.jpg);" class="position-relative overflow-hidden p-3  text-center text-white">
+            <div class="col-md-5 p-lg-5 mx-auto my-5 justify-content-center">
+                <h1 class="display-4 fw-normal ">Northstar</h1>
+                <p class="lead fw-normal">“The fashionable place to shop” Proudly offering quality products and exceptional service since 1886.</p>
+               
+            </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        </div>
+
+        <!-- Adding the about us and iur features -->
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Safe Shopping</h2>
+                    <p class="lead">We have a really secure ways of payments</p>
+                </div>
+                    <img  class="display-5 my-2" src="/aboutusImg/shield.png" class="img-thumbnail" alt="...">
+            </div>
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Free Shipping</h2>
+                    <p class="lead">Our shipping is free and fast</p>
+                </div>
+                <img  class="display-5 my-2" src="/aboutusImg/shipping.png" class="img-thumbnail" alt="...">
+            </div>
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">100% Customer Satisfaction</h2>
+                    <p class="lead">We have the best quality products </p>
+                </div>
+                
+                <img  class="display-5 my-2" src="/aboutusImg/customer-satisfaction.png" class="img-thumbnail" alt="...">
+            </div>
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Easy Return</h2>
+                    <p class="lead">WE have the option to return products in an easy way</p>
+                   
+                </div>
+                <img  class="display-5 my-2" src="/aboutusImg/easy.png" class="img-thumbnail" alt="...">
+
+            </div>
+        </div>
+
+
+
+    </main>
+   <!--Start of  Footer -->
+   <footer>
+    <section class="mb-0 mt-0">
+      <div class="footer text-light">
+        <div class="  pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <a href="#">
+                 <img style="width: 40%;margin-bottom: 5%;" src="/logo/AbdulExpressRed.png" alt="">
+                    <h2 style="margin-top: 5%;">Northstar</h2>
+                   
+                </a>
+                <address class="color-dark-20 text-dark">
+                  1600 Amphitheatre Parkway
+                  <br> Mountain View, CA 94043
+                </address>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Disclaimer</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Product</h4>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#">Features</a>
+                  </li>
+                  <li>
+                    <a href="#">Customers</a>
+                  </li>
+                  <li>
+                    <a href="#">Store</a>
+                  </li>
+                </ul>
+              </div>
+              <br style="clear:both" class="hidden-sm-up">
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Company</h4>
+                <ul class="list-unstyled list-dark">
+                  <li>
+                    <a href="#">About Northstar</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Press</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <h4 class="my-2 text-dark">Connect</h4>
+                <ul class="list-unstyled list-light">
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#">Support</a>
+                  </li>
+                  <li>
+                    <a href="#">Social</a>
+                  </li>
+
+                </ul>
+                <p class="text-dark mt-2">Stay up-to-date!</p>
+                <form>
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email"
+                        aria-describedby="basic-addon2">
+                      <button class="btn btn-primary btn-sm" type="button">Ok</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <hr>
+            <div class="row f-flex justify-content-between">
+              <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                <p class="mt-2  text-dark"> © Copyright 2021 • All Rights
+                  Reserved |
+                  <a class=" " href="#">Disclaimer</a> |
+                  <a class=" " href="#">Contact</a>
+                </p>
+              </div>
+              <div class="col-md-4 text-xs-center   text-lg-dark text-secondary my-1">
+                <div class="btn-container  mt-1 text-md-end text-sm-center">
+                  <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-twitter fa-lg color-dark" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-primary">
+                      <i class="fab fa-google-plus fa-lg" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!--End of  Footer -->
+
+
+
+    <!-- end of products section -->
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/scripts.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+    <script src="/login.js"></script>
+    <script src="/checkout.js"></script>
+</body>
+
+</html>

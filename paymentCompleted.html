@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="rceipt report ">
+  <meta name="keywords" content="receipt,bill,pay">
+  <meta name="author" content="Abdul Rahman">">
+  <link rel="icon" href="/logo/jalenossLogoRed.png">
+  <title>Paymnet Receipt</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+
+
+
+  <link rel="stylesheet" href="checkout.css">
+  <meta name="theme-color" content="#7952b3">
+
+
+
+  <!-- Custom styles for this template -->
+  <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <main style="border: 1px solid black;padding: -12rem;width: 50%;" class="container-fluid text-center  justify-content-center" >
+    <section  class="container-fluid text-center  justify-content-center">
+      <i style="color: green;font-size: 8rem;" class="fas fa-check-circle"></i>
+      <div class="container-fluid">
+
+      </div>
+      <br>
+      <h1 class="alert alert-success" role="alert">Payment Complete</h1>
+      <p style="font-size: 2rem;">Thank you, your payment has been successful. A confirmation email has been sent to
+        <span class="email" style="font-weight: normal;font-size: 1.5rem;color: rgb(11, 36, 117);">@Email</span></p>
+      <div>
+        <h3 style="border-bottom: 1px solid black;">ORDER DETAILS</h3>
+        <div class="container text-center " style="margin-top: 2rem;" id="orderDetails">
+          <p>Name:  <span id="firstName"></span></p>
+          <p>Email:  <span class="email"></span></p>
+          <p>Address1:  <span id="address"></span></p>
+          <p>Address2:  <span id="address2"></span></p>
+          <p>state:  <span id="state"></span></p>
+          <p>Country:  <span id="country"></span></p>
+          <p>Zip:  <span id="zip"></span></p>
+          <p>Total Price:  $<span id="totalPrice"></span></p>
+        </div>
+      </div>
+      <div class="container-fluid mb-5">
+      <a href="/chekcout2.html"><button style="background-color: rgb(7, 71, 124);color: white;border: 2px solid rgb(6, 78, 146);border-radius: 4%;" onclick="GetChekcOutBAck()" >Back To Chekcout</button></a>  
+        <a href="/home.html"><button style="background-color: rgb(211, 8, 8);color: white;border: 2px solid rgb(197, 11, 11);border-radius: 4%;">Home</button></a>
+      </div>
+      
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="app.js"></script>
+  <script src="/checkout.js"></script>
+  <script src="Payment.js"></script>
+</body>
+
+</html>

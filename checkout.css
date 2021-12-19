@@ -1,0 +1,22 @@
+
+body{
+    margin: 0px;
+    padding: 1%;
+}
+#checkoutCartList img{
+    width: 60%;
+    float: left;
+}
+/* Hide button */
+
+#checkoutCartList button{
+display: none;
+}
+#checkoutCartList .cart-item{
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid gray;
+    float: right;
+    display: flex;
+}
+
+

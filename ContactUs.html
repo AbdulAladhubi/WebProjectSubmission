@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="contact us page, where the customer can stay in touch with us about anything">
+      <meta name="keywords" content="contact us ,email,messge,in touch">
+      <meta name="author" content="Abdul Rahman">
+      <link rel="icon" href="/logo/jalenossLogoRed.png">
+    <link rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      <link rel="stylesheet" href="/style.css">
+
+    <!-- Plugins -->
+  </head>
+
+  <body>
+ <!-- header  -->
+ <header>
+
+
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img style="width:60%;" src="/logo/AbdulExpressRed.png" alt="Best Online Clothes Shop">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item px-3">
+              <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="/aboutus.html">About Us</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="/ContactUs.html">Contact Us</a>
+            </li>
+
+            <li class="nav-item px-3">
+              <a class="nav-link" id="userdetails" href="/UserDetails.html">User Details</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" id="loginlogout" href="/index.html">Login</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="cart">
+          <button type="button" id="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count-info"></span>
+          </button>
+
+          <div class="cart-container">
+            <div class="cart-list">
+
+            </div>
+
+            <div class="cart-total">
+              <h3>Total: $</h3>
+              <span id="cart-total-value"></span>
+              <a href="chekcout2.html"> <span>checkout</span> </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+
+
+
+
+ 
+</header>
+
+
+
+<!-- This code below i have to add it to make the cart button work , this code is hidden so wont effect any thing -->
+<div style="display: none;" class="product-list row row-cols-1 row-cols-md-5 g-4"></div>
+    <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
+      style="min-height: 25vh; background-size: cover; background-image:linear-gradient(90deg, rgba(8,1,1,0.3984944319524685) 0%, rgba(8,1,1,0.1940126392353817) 100%), url(/banners/bannerCustomer.jpg);">
+     <!-- This is thebanner -->
+      <div class="container-fluid">
+        <div
+          class="row  justify-content-center align-items-center d-flex text-center h-100">
+          <div class="col-12 col-md-8  h-50 ">
+            <h1 class="   text-light mb-2 mt-5"><strong>How can we help?</strong> </h1>
+            <p class="lead  text-light mb-5">send us a message</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 pb-5">
+      <grammarly-extension data-grammarly-shadow-root="true"
+        style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
+        class="cGcvT"></grammarly-extension>
+      <div class="container">
+        <div class="row text-center justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7">
+            <h3 class="display-4 fw-bold">Contact Us</h3>
+            <p class="lead mt-3 mb-5">Your Satisfaction is our goal, contact us if you have any queries we try our best to reply back as soon as possible.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg ">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input type="email" class="form-control"
+                    placeholder="Enter email">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <input type="text" class="form-control"
+                    placeholder="Subject">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <textarea class="form-control border-secondary" name="message"
+                    rows="3" placeholder="How can we help?"
+                    spellcheck="false"></textarea>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <button type="submit"
+                    class="btn btn-primary btn-lg"  onclick="ShowAlert2()">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Here is the map where the store is located -->
+          <div class="col-12 col-md-8 col-lg pt-5 m-auto pt-lg-0">
+            <iframe class="mb-4"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467900.2034913471!2d58.071684326714305!3d23.623321342927518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ff3b0cbbf97d%3A0xf43ffd64c342d2db!2sOman%20Avenues%20Mall!5e0!3m2!1sen!2sie!4v1639437072119!5m2!1sen!2sie"
+              width="100%" height="200" frameborder="0" style="border:0"
+              allowfullscreen=""></iframe> 
+              <!-- store information and location -->
+            <p><strong>Location</strong></p>
+            <p>
+              27 Oman Northstar Mall
+              <br>under Ruwi bridge,right after the turn right
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-2 pb-2 mt-0 align-items-center d-flex bg-dark"
+      style="min-height: 100vh; background-size: cover; background-image: linear-gradient(90deg, rgba(11,18,18,0.7766456924566701) 0%, rgba(0,0,0,0.42930675688244047) 100%), url(/banners/back2.png);">
+    <!-- an additional section for displaying ads maybe -->
+      <div class="container ">
+        <div
+          class="row  justify-content-center align-items-center d-flex-row text-center h-100">
+          <div class="col-12 col-md-12 h-50 ">
+            <p class="text-uppercase text-light">- s i n c e | 2 0 11 - </p>
+            <h1 class="fw-bold   text-light display-4 mb-2 mt-5">DISCOVER OUR AWARD-WINNING 
+              <br>Written by customer & employee experiance rxperts who tried our products
+            </h1>
+            <p>
+              <a href="#" class="btn btn-success btn-lg mt-5 mb-5 ">Read our blog &gt;</a>
+            </p>
+            <div class="btn-container-wrapper p-relative d-block  zindex-1">
+              <hr>
+            </div>
+          </div>
+        </div>
+        <div class="row text-left text-white align-items-start">
+          <div class="col-12 col-md-6 col-lg-4">
+            <h3 class="text-white">INC</h3>
+            <p class="text-h3">Blogs that can touch you more than an MBA
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 pt-4 pt-md-0">
+            <h3 class="text-white">NGO-DATA</h3>
+            <p class="text-h3">Customer experiance blogs you should be reading
+            </p>
+          </div>
+          <div class="col-12 col-md-8 m-auto m-lg-0 col-lg-4 pt-5 pt-lg-0">
+            <h3 class="text-white">Customer Curu</h3>
+            <p class="text-h3">20 best customer experiance blogs that you MUST follow
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Start of  Footer -->
+    <footer>
+      <section class="mb-0 mt-0">
+        <div class="footer text-light">
+          <div class="  pt-5 pb-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  <a href="#">
+                   <img style="width: 40%;margin-bottom: 5%;" src="/logo/AbdulExpressRed.png" alt="">
+                      <h2 style="margin-top: 5%;">Northstar</h2>
+                     
+                  </a>
+                  <address class="color-dark-20 text-dark">
+                    1600 Amphitheatre Parkway
+                    <br> Mountain View, CA 94043
+                  </address>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Disclaimer</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2 text-dark">Product</h4>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">Features</a>
+                    </li>
+                    <li>
+                      <a href="#">Customers</a>
+                    </li>
+                    <li>
+                      <a href="#">Store</a>
+                    </li>
+                  </ul>
+                </div>
+                <br style="clear:both" class="hidden-sm-up">
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2 text-dark">Company</h4>
+                  <ul class="list-unstyled list-dark">
+                    <li>
+                      <a href="#">About Northstar</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                    <li>
+                      <a href="#">Press</a>
+                    </li>
+                    <li>
+                      <a href="#">Events</a>
+                    </li>
+  
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                  <h4 class="my-2 text-dark">Connect</h4>
+                  <ul class="list-unstyled list-light">
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#">Support</a>
+                    </li>
+                    <li>
+                      <a href="#">Social</a>
+                    </li>
+  
+                  </ul>
+                  <p class="text-dark mt-2">Stay up-to-date!</p>
+                  <form>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email"
+                          aria-describedby="basic-addon2">
+                        <button class="btn btn-primary btn-sm" type="button">Ok</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <div class="row f-flex justify-content-between">
+                <div class="col-md-8 text-xs-center  text-left text-secondary my-1">
+                  <p class="mt-2  text-dark"> © Copyright 2021 • All Rights
+                    Reserved |
+                    <a class=" " href="#">Disclaimer</a> |
+                    <a class=" " href="#">Contact</a>
+                  </p>
+                </div>
+                <div class="col-md-4 text-xs-center   text-lg-dark text-secondary my-1">
+                  <div class="btn-container  mt-1 text-md-end text-sm-center">
+                    <div class="mb-1 mr-3 align-self-right pt-0 d-inline-block">
+                      <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                        <i class="fab fa-twitter fa-lg color-dark" aria-hidden="true"></i>
+                      </a>
+                      <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+                      </a>
+                      <a href="#" role="button" class="text-light p-2 m-2 btn btn-round btn-rised btn-icon btn-primary">
+                        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+                      </a>
+                      <a href="#" role="button" class="text-light p-2 m-2 btn btn-rised btn-round btn-icon btn-primary">
+                        <i class="fab fa-google-plus fa-lg" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!--End of  Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
+      crossorigin="anonymous"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/sweet.js"></script>
+<script src="app.js"></script>
+<script src="/login.js"></script>
+  </body>
+
+</html>

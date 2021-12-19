@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logo/jalenossLogoRed.png">
+    <title>Login Form</title>
+    <meta name="description" content="Login form to sign in Northstar store">
+    <meta name="keywords" content="login,signin,checkin">
+    <meta name="author" content="Abdul Rahman">
+    <link rel="stylesheet" href="login.css" />
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+<body>
+    
+    <div class="container">
+     
+      <span class="big-circle"></span>
+      <img class="big-circle2" src="/logo/AbdulExpressRed.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Login Now</h3>
+          <p class="text">
+            Rediscover a great shopping tradition,
+            Favorite brands and hottest trends.
+          </p>
+
+          <div class="info">
+            <div class="information">
+
+              <p>92 Sligo,Ireland, NY 11553</p>
+            </div>
+            <div class="information">
+              
+              <p>ASG@bestshop.com</p>
+            </div>
+            <div class="information">
+           
+              <p>123-456-789</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+<!-- Make sure you check the automcomplete and action -->
+<div class="alert alert-danger d-none" role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>    
+
+          <form name="login" id="user-login"  method="get">
+            <a href="index.html"><input type="button" value="Login" class="" disabled/></a> 
+            <a href="register.html"><input type="button" value="Register" class="btn" /></a> 
+            <h3 class="title">Login</h3>
+          
+            <div class="input-container">
+              <label for="Email">Email</label>
+              <input id="email" name="email" type="email"  class="input" />
+              <p id="emailloginValid"></p>
+              <!-- name="email" -->
+           
+           
+            </div>
+            
+            <div class="input-container">
+              <label for="Password">Password</label>
+              <input name="password" id="password" type="password" class="input"/>
+              <!-- name="password" -->
+              
+           
+            </div>
+           
+            <input  type="submit" value="Login" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="login.js"></script>
+  </body>
+</html>
